@@ -1,0 +1,491 @@
+/* Основной стиль */
+body {
+    background-color: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #111;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    animation: glow-animation 2s infinite;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    animation: glow-animation 2s infinite;
+}
+
+/* Стили для текста и изображения */
+.post-image img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.glowing-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    animation: glow 2s infinite;
+}
+
+.glowing-link:hover {
+    text-decoration: underline;
+}
+
+/* Нижнее меню */
+.bottom-menu {
+    display: flex;
+    justify-content: space-between; /* Убираем лишнее пространство слева */
+    align-items: center; /* Центрируем элементы по вертикали */
+    background-color: #222;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Убедимся, что меню начинается с самого края экрана */
+    right: 0; /* И заканчивается у правого края */
+    width: 100%; /* Полная ширина экрана */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu-item {
+    flex: 1; /* Каждая кнопка занимает равное пространство */
+    text-align: center; /* Текст и иконки по центру */
+    color: white;
+    text-decoration: none;
+    padding: 5px 0; /* Отступы внутри кнопок */
+    max-width: none; /* Убираем фиксированную ширину */
+    font-size: 14px; /* Размер шрифта для текста кнопок */
+}
+
+.menu-item i {
+    display: block;
+    font-size: 20px; /* Размер иконки */
+}
+
+.menu-item:hover {
+    animation: glow 1s infinite alternate;
+}
+
+/* Анимация подсветки */
+@keyframes glow {
+    from {
+        color: #fff;
+    }
+    to {
+        color: #0ff;
+    }
+}
+	
+}
+
+@media (max-width: 480px) {
+    .bottom-menu {
+        flex-wrap: wrap; /* Кнопки будут переходить на следующую строку при необходимости */
+    }
+
+    .menu-item {
+        flex: 0 1 calc(25% - 10px); /* Кнопки занимают 25% ширины с отступами */
+        max-width: none; /* Убираем фиксированную ширину */
+        text-align: center; /* Центрируем текст */
+        margin: 5px 0; /* Отступы между кнопками */
+    }
+}
+
+/* Анимация подсветки */
+@keyframes glow {
+    from {
+        color: #fff;
+    }
+    to {
+        color: #0ff;
+    }
+}
+
+
+/* Анимация сияния */
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+    50% { text-shadow: 0 0 15px #fff, 0 0 25px #fff; }
+}
+
+@keyframes glow-animation {
+    0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+    50% { text-shadow: 0 0 15px #fff, 0 0 25px #fff; }
+}
+
+main {
+    padding: 2px;
+    padding-bottom: 60px;
+}
+
+/* Стили для страницы */
+.page {
+    display: none; /* Hide all pages by default */
+}
+
+/* Стиль для блока с курсами */
+#courses {
+    background-color: #2b2b2b;
+    padding: 40px 0;
+    border-radius: 10px;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.course-item {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+}
+
+.course-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.course-title {
+    font-size: 18px;
+    margin-top: 15px;
+    animation: glow 2s infinite;
+}
+
+.course-price {
+    font-size: 16px;
+    margin-top: 10px;
+    animation: glow 2s infinite;
+}
+
+.course-buttons {
+    margin-top: 15px;
+}
+
+.course-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    animation: glow 2s infinite;
+}
+
+.course-button:hover {
+    background-color: #555;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стиль для курсорных кнопок */
+.course-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    animation: glow 2s infinite;
+}
+
+.course-button:hover {
+    background-color: #555;
+}
+
+/* Анимация сияния */
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+    50% { text-shadow: 0 0 15px #fff, 0 0 25px #fff; }
+}
+
+/* Стиль для программы обучения */
+.program-link {
+    background-color: #1a73e8;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.program-link:hover {
+    background-color: #0059b3;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стиль для Telegram сообщения */
+.telegram-post {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.telegram-post .post-image {
+    text-align: center;
+}
+
+.telegram-post .post-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.telegram-post .post-content {
+    margin-top: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.telegram-post .post-content p {
+    margin-bottom: 15px;
+}
+
+/* Стили для ссылок */
+.telegram-post .glowing-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.telegram-post .glowing-link:hover {
+    color: #0059b3;
+}
+
+/* Стили для кнопок */
+.program-button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.program-button:hover {
+    background-color: #0059b3;
+}
+
+/* Стили для модальных окон */
+.program-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.program-modal-content {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+	max-height: 80vh;
+	overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Анимация появления модального окна */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .program-modal-content {
+        width: 90%;
+    }
+}
+
+.telegram-post {
+    background-color: #2c2c2c; /* Тёмно-серый фон */
+    color: #ffffff; /* Белый текст */
+    padding: 20px;
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень */
+}
+
+.telegram-post {
+    max-width: 500px; /* Максимальная ширина поста */
+    margin: 20px auto; /* Выравнивание по центру экрана */
+    background-color: #2c2c2c; /* Тёмно-серый фон */
+    color: #ffffff; /* Белый текст */
+    padding: 20px;
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень */
+}
+
+.telegram-post .post-image img {
+    width: 100%; /* Изображение занимает ширину контейнера */
+    border-radius: 10px; /* Скругление углов у изображения */
+}
+
+.telegram-post .post-content {
+    margin-top: 15px; /* Отступ сверху для текста */
+    line-height: 1.6; /* Удобочитаемость текста */
+}
+
+.program-modal-text {
+    max-height: 500px; /* Максимальная высота, чтобы окно не выходило за пределы */
+    overflow-y: auto;  /* Включаем вертикальную прокрутку */
+    padding-right: 10px; /* Небольшое отступление для прокрутки */
+}
+
+/* Стилизация полосы прокрутки */
+.program-modal-text::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Заблокировать прокрутку страницы, когда модальное окно открыто */
+body.modal-open {
+    overflow: hidden;
+}
+
+.MiddleHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+	display: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #212121;
+    border: 1px solid #212121;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ChatInfo {
+    display: flex;
+    align-items: center; /* Горизонтальное выравнивание */
+    gap: 16px; /* Расстояние между аватаркой и текстом */
+}
+
+.Avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.Avatar .inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.status {
+    font-size: 14px;
+    color: #666;
+}
+
+.Button {
+    background-color: #0088cc;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background-color: #007bb5;
+}
+
+.MiddleHeader .header-tools .HeaderActions {
+    margin-top: 15px; /* Увеличьте значение для большего отступа */
+}
+
+.MiddleHeader .Avatar {
+    margin-right: 15px; /* Отступ между аватаркой и текстовой информацией */
+}
+
+.MiddleHeader .chat-info-wrapper {
+    display: flex;
+    align-items: center; /* Выравнивает элементы по вертикали */
+    gap: 20px; /* Добавляет расстояние между аватаркой и текстом */
+}
+
